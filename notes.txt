@@ -1,0 +1,25 @@
+# PUG notes
+# npm install pug-cli -g            //  install the pug cli globally
+# pug -w ./ -o ./html -P            //  ./ watch the pug in root directory,
+                                    //  -o where the output will be html folder. 
+                                    //  -P will make the HTML code pretty
+# //-                               //  to comment in pug
+
+# always indent if it is a child element
+
+# Pug can do conditional statements 
+# Ex. of pug conditionals
+#- var user = {description: 'foo bar baz'}
+#- var authorised = false
+#user
+#  if user.description
+#    h2.green Description
+#    p.description= user.description
+#  else if authorised
+#    h2.blue Description
+#    p.description.
+#      User has no description,
+#      why not add one...
+#  else
+#    h2.red Description
+#    p.description User has no description

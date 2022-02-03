@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@300&display=swap");
+#section1 {
+  width: auto;
+  height: 630px;
+  background-image: url(/assets/images/banner-1.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+#section1 .navbar {
+  margin-top: 20px;
+}
+
+#section1 .navbar #navbar-link a {
+  padding: 20px;
+}
+
+#section1 .hero-body .container .title {
+  margin-top: 119px;
+}
+
+#section1 .hero-body .container .subtitle {
+  margin-top: 10px;
+}
+
+#section1 .hero-body .container #signupBtn {
+  background-color: #ff4f0a;
+}
+
+#section1 #logo {
+  height: 140px;
+  width: auto;
+}
+
+#section1 #links {
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+#section1 #signupBtn {
+  width: 280px;
+  color: white;
+}
+
+#aboutus {
+  margin-top: 60px;
+}
+
+#aboutus .columns #aboutusTitle {
+  font-size: 27px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+#aboutus .columns .name {
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#aboutus .columns .personInfo {
+  font-size: 15px;
+  text-align: center;
+}
+
+#aboutus .columns #personImg {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+/*# sourceMappingURL=style.css.map */

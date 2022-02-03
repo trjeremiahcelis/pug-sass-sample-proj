@@ -1,0 +1,69 @@
+doctype html
+html
+    head
+        link(rel="stylesheet", href="/assets/sass/style.css")
+        link(rel="stylesheet", href="/assets/sass/bulma/bulma.min.css")
+        script(src="/assets/js/index.js" defer) 
+    body
+        section(class='hero is-primary' id='section1')
+            div.hero-head
+                nav(class='navbar', role='navigation', aria-label='main navigation')
+                    div.container
+                        div.navbar-brand
+                            a(class='navbar-item' href="#")
+                                img(src="/assets/images/logo-cvx.png", alt="Logo", id='logo') 
+                                p.logotxt ConvX
+                            a(role='button' class='navbar-burger' aria-label="menu" aria-expanded="false" data-target="navbarlink")
+                                span(aria-hidden="true")
+                                span(aria-hidden="true")
+                                span(aria-hidden="true")
+                        div#navbar-link.navbar-menu
+                            div(class='navbar-end' id='links')
+                                a(class='navbar-item' href='#') About Us
+                                a(class='navbar-item' href='#') Contact Us
+                                a(class='navbar-item' href='#') How It Works
+                        div.navbar-end
+                            div.navbar-item
+                                div(class='buttons')
+                                    a(class='button is-link') 
+                                        strong Sign in
+            div.hero-body
+                div.container
+                    p.title Revolutionising Conveyancing through <br/> Digitilisation     
+                    p.subtitle ConvX is a technology platform that will automate and commoditise the mostly <br/> manual process of transferring land ownership
+                    button(class="button" id='signupBtn')
+                        strong Sign up
+        section 
+            div.container#aboutus
+                div.columns
+                    div(class='column is-two-fifths')
+                        h1.title#aboutusTitle About Us
+                        p ConvX has legal, tech and start up talent, Dan, the tech lead, is also highly experienced in IP law; Simon, operations, has also founded the Mills Oakley Legal Services Accelator; and, Nick (sales lead) has scaled a global B2B business from 0 to $12M rev and 100 staff inside 3 years.
+                        br
+                        p We have access to capital, the right networks and execution experience in spades. The timing is right, the team is right and we are now looking for investors to complete the picture.
+                    div(class='column is-one-fifth')
+                        div.card
+                            div.card-image
+                                figure(class='image is-256x256')
+                                    img(src="/assets/images/img-dan.png", alt="Dan Hunter photo", id='personImg')
+                            div.content
+                                p.name Dan Hunter
+                                p.personInfo Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris.
+                    div(class='column is-one-fifth')
+                        div.card
+                            div.card-image
+                                figure(class='image is-256x256')
+                                    img(src="/assets/images/img-simon.png", alt="Dan Hunter photo", id='personImg')
+                            div.content
+                                p.name Simon Quirk
+                                p.personInfo Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris.
+                    div(class='column is-one-fifth')
+                        div.card
+                            div.card-image
+                                figure(class='image is-256x256')
+                                    img(src="/assets/images/img-nick.png", alt="Dan Hunter photo", id='personImg')
+                            div.content
+                                p.name Nick Stanley
+                                p.personInfo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+                            
+                                
