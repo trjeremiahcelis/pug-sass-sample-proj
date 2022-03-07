@@ -3,21 +3,24 @@
   <head>
     <link rel="stylesheet" href="/assets/sass/style.css">
     <link rel="stylesheet" href="/assets/sass/bulma/bulma.min.css">
-    <script src="/assets/js/index.js" defer> </script>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"> </script>
+    <script src="/assets/js/index.js"> </script>
   </head>
   <body>
-    <section class="hero is-primary" id="section1">
+    <section class="hero is-primary" id="home">
       <div class="hero-head">
         <nav class="navbar" role="navigation" aria-label="main navigation">
           <div class="container">
             <div class="navbar-brand"><a class="navbar-item" href="#"><img src="/assets/images/logo-cvx.png" alt="Logo" id="logo">
-                <p class="logotxt">ConvX</p></a><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarlink"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
-            <div class="navbar-menu" id="navbar-link">
-              <div class="navbar-end" id="links"><a class="navbar-item" href="#">About Us</a><a class="navbar-item" href="#">Contact Us</a><a class="navbar-item" href="#">How It Works</a></div>
-            </div>
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <div class="buttons"><a class="button is-link"> <strong>Sign in</strong></a></div>
+                <p class="logotxt">ConvX</p></a><a class="navbar-burger" role="button" aria-label="menu" aria-expanded="false" data-target="navbarLink" onclick="toggleBurgerMenu()"><span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span></a></div>
+            <div class="navbar-menu" id="navbarLink">
+              <div class="navbar-end" id="links"><a class="navbar-item" href="#aboutus">About Us</a><a class="navbar-item" href="#contactinfo">Contact Us</a><a class="navbar-item" href="#howitworks">How It Works</a>
+                <div class="navbar-end">
+                  <div class="navbar-item">
+                    <div class="buttons"><a class="button is-link"> <strong>Sign in</strong></a></div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -25,55 +28,101 @@
       </div>
       <div class="hero-body">
         <div class="container">
-          <p class="title">Revolutionising Conveyancing through <br/> Digitilisation     </p>
-          <p class="subtitle">ConvX is a technology platform that will automate and commoditise the mostly <br/> manual process of transferring land ownership</p>
+          <p class="title is-size-2-mobile">Revolutionising Conveyancing through <br/> Digitisation     </p>
+          <p class="subtitle is-size-4-mobile">ConvX is a technology platform that will automate and commoditise the mostly <br/> manual process of transferring land ownership</p>
           <button class="button" id="signupBtn"><strong>Sign up</strong></button>
         </div>
       </div>
     </section>
-    <section> 
+    <section class="aboutus"> 
       <div class="container" id="aboutus">
-        <div class="columns">
+        <div class="columns" id="aboutus">
           <div class="column is-two-fifths">
-            <h1 class="title" id="aboutusTitle">About Us</h1>
-            <p>ConvX has legal, tech and start up talent, Dan, the tech lead, is also highly experienced in IP law; Simon, operations, has also founded the Mills Oakley Legal Services Accelator; and, Nick (sales lead) has scaled a global B2B business from 0 to $12M rev and 100 staff inside 3 years.</p><br>
-            <p>We have access to capital, the right networks and execution experience in spades. The timing is right, the team is right and we are now looking for investors to complete the picture.</p>
+            <h1 class="title is-size-1-mobile" id="aboutusTitle">About Us</h1>
+            <p class="is-size-4-mobile">ConvX has legal, tech and start up talent, Dan, the tech lead, is also highly experienced in IP law; Simon, operations, has also founded the Mills Oakley Legal Services Accelator; and, Nick (sales lead) has scaled a global B2B business from 0 to $12M rev and 100 staff inside 3 years.</p><br>
+            <p class="is-size-4-mobile">We have access to capital, the right networks and execution experience in spades. The timing is right, the team is right and we are now looking for investors to complete the picture.</p>
           </div>
           <div class="column is-one-fifth">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-256x256"><img src="/assets/images/img-dan.png" alt="Dan Hunter photo" id="personImg"></figure>
+            <div class="cards">
+              <div class="card-image"> 
+                <figure class="image is-1by1"><img src="/assets/images/img-dan.png" id="personImg"></figure>
               </div>
-              <div class="content">
+              <div class="content"> 
                 <p class="name">Dan Hunter</p>
-                <p class="personInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris.</p>
+                <p class="personInfo is-size-7-mobile">Lawyer and &quot;Tech Guy&quot; Dean od Law at Swinburne Founder of Quitch</p>
               </div>
             </div>
           </div>
           <div class="column is-one-fifth">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-256x256"><img src="/assets/images/img-simon.png" alt="Dan Hunter photo" id="personImg"></figure>
+            <div class="cards">
+              <div class="card-image"> 
+                <figure class="image is-1by1"><img src="/assets/images/img-simon.png" id="personImg"></figure>
               </div>
-              <div class="content">
+              <div class="content"> 
                 <p class="name">Simon Quirk</p>
-                <p class="personInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris.</p>
+                <p class="personInfo is-size-7-mobile">Lawyer and &quot;Operations Guy&quot; Ex COO of ASX listed Founder of Vidversity</p>
               </div>
             </div>
           </div>
           <div class="column is-one-fifth">
-            <div class="card">
-              <div class="card-image">
-                <figure class="image is-256x256"><img src="/assets/images/img-nick.png" alt="Dan Hunter photo" id="personImg"></figure>
+            <div class="cards">
+              <div class="card-image"> 
+                <figure class="image is-1by1"><img src="/assets/images/img-nick.png" id="personImg"></figure>
               </div>
-              <div class="content">
+              <div class="content"> 
                 <p class="name">Nick Stanley</p>
-                <p class="personInfo">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.</p>
+                <p class="personInfo is-size-7-mobile">Engineer and &quot;Sales Guy&quot; Founder of Sky Software Investor, multi founder, VC</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <section class="hero is-primary" id="convx">
+      <div class="hero-body">
+        <div class="logoandtext"> <img src="/assets/images/logo-cvx.png" alt="ConvX Logo" id="logo2">
+          <p class="subtitle">ConvX may be the Uber of conveyancing</p>
+        </div>
+      </div>
+    </section>
+    <section class="hero is-primary" id="howitworks">
+      <div class="hero-body"> 
+        <div class="columns">
+          <div class="column is-7 is-offset-5 is-1-tablet is-offset-1-tablet"> 
+            <p class="hiwTitle has-text-centered-mobile">How it Works</p>
+            <ul>
+              <li class="has-text-centered-mobile">Interacts via web/mobile at the consumer level, ensuring timely information, response and reassurance</li>
+              <li class="has-text-centered-mobile">Automates and tracks all processes necessary to convey land, reducing insurance costs to deliver settlements more quickly and consistently </li>
+              <li class="has-text-centered-mobile">Provides data analytics for clients who are developers. Data will also be packaged for sale to other parties.</li>
+              <li class="has-text-centered-mobile">Parcels out piecework within the transaction to home-based &amp; remote knowledge workers </li>
+              <li class="has-text-centered-mobile">Deconstructed process allows for the progressive automation of discrete stages over time</li>
+              <li class="has-text-centered-mobile">Delivers lower cost to consumer while maintaining attractive margins and also enabling ConvX to scale with more agility than the traditional employee based model</li>
+              <li class="has-text-centered-mobile">Integrates with other real estate platforms to create an end to end real estate solutions </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contactinfo hero is-link">
+      <div class="content column has-text-centered" id="contactinfo">
+        <p class="title">Contact Information         </p>
+        <p><span class="icon-text"> <span class="icon"> 
+              <ion-icon name="location-sharp">  </ion-icon></span><span>56 Maxwell St, South Turrmurra NSW 2074, Australia </span></span></p>
+        <p><span class="icon-text">     <span class="icon"> 
+              <ion-icon name="call-sharp">  </ion-icon></span><span>+xx (x)xxxx xxx xxx</span></span></p>
+        <p><span class="icon-text">     <span class="icon"> 
+              <ion-icon name="call-sharp">  </ion-icon></span><span>+xx (x)xxxx xxx xxx</span></span></p>
+        <p><span class="icon-text">     <span class="icon"> 
+              <ion-icon name="mail-sharp">  </ion-icon></span><span>info@convx.com              </span></span></p>
+      </div>
+    </section>
   </body>
+  <footer class="footer">  
+    <div class="has-text-centered">
+      <ion-icon class="icon is-large" name="logo-linkedin"></ion-icon>
+      <p>Privacy Policy - Terms & Conditions</p>
+      <p>Copyright © ConvX</p>
+      <p>v0.01</p>
+    </div>
+  </footer>
 </html>

@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Roboto:wght@300&display=swap");
-#section1 {
+@import url(//db.onlinewebfonts.com/c/23bd28c1783b15f0a40dcf9447e44813?family=AntagometricaBTW01-Regular);
+html {
+  scroll-behavior: smooth;
+}
+
+#home {
   width: auto;
   height: 630px;
   background-image: url(/assets/images/banner-1.jpeg);
@@ -9,43 +14,48 @@
   position: relative;
 }
 
-#section1 .navbar {
+#home .navbar {
   margin-top: 20px;
 }
 
-#section1 .navbar #navbar-link a {
+#home .navbar #navbarLink a {
   padding: 20px;
 }
 
-#section1 .hero-body .container .title {
-  margin-top: 119px;
+#home .navbar #navbarLink a:hover {
+  background-color: orange;
 }
 
-#section1 .hero-body .container .subtitle {
+#home .hero-body .container .title {
+  margin-top: 119px;
+  font-family: "Antagometric", "sans-serif";
+}
+
+#home .hero-body .container .subtitle {
   margin-top: 10px;
 }
 
-#section1 .hero-body .container #signupBtn {
+#home .hero-body .container #signupBtn {
   background-color: #ff4f0a;
 }
 
-#section1 #logo {
+#home #logo {
   height: 140px;
   width: auto;
 }
 
-#section1 #links {
+#home #links {
   font-size: 14px;
   font-family: "Roboto", sans-serif;
 }
 
-#section1 #signupBtn {
+#home #signupBtn {
   width: 280px;
   color: white;
 }
 
 #aboutus {
-  margin-top: 60px;
+  margin: 80px;
 }
 
 #aboutus .columns #aboutusTitle {
@@ -60,13 +70,104 @@
   font-weight: 600;
 }
 
-#aboutus .columns .personInfo {
-  font-size: 15px;
-  text-align: center;
+#aboutus .columns .cards {
+  -ms-flex-item-align: normal;
+      -ms-grid-row-align: normal;
+      align-self: normal;
 }
 
-#aboutus .columns #personImg {
+#aboutus .columns .cards .card-image #personImg {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+
+#aboutus .columns .cards .personInfo {
+  font-size: 15px;
+  text-align: center;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+#convx {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.589)), to(rgba(0, 0, 0, 0.582))), url(/assets/images/img-quote.jpeg);
+  background: linear-gradient(rgba(0, 0, 0, 0.589), rgba(0, 0, 0, 0.582)), url(/assets/images/img-quote.jpeg);
+  height: 430px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#convx .logoandtext {
+  margin: 90px;
+}
+
+#convx .logoandtext #logo2, #convx .logoandtext p {
+  display: block;
+  margin: auto;
+  height: 100px;
+  width: auto;
+  margin-bottom: 13px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 200;
+}
+
+#howitworks {
+  background: url(/assets/images/img-howitworks-2.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+#howitworks .hiwTitle {
+  font-size: 33px;
+  font-weight: 220;
+}
+
+#howitworks p, #howitworks li {
+  color: black;
+  list-style-type: none;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+#howitworks li:before {
+  content: url(/assets/images/bulb.svg);
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.7rem;
+}
+
+.contactinfo .title {
+  font-weight: 100;
+  font-family: "Roboto", sans-serif;
+}
+
+.contactinfo .content {
+  margin: 40px;
+}
+
+.footer p {
+  color: #221f1f;
+  margin: 10px;
+  font-weight: 460;
+}
+
+.footer .liFooter {
+  size: 20rem;
+}
+
+@media only screen and (max-width: 650px) {
+  #howitworks {
+    background: unset;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  #howitworks {
+    background: unset;
+  }
 }
 /*# sourceMappingURL=style.css.map */

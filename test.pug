@@ -1,0 +1,17 @@
+doctype html 
+html
+    head 
+        link(rel="stylesheet", href="/assets/sass/style.css")
+        link(rel="stylesheet", href="/assets/sass/bulma/bulma.min.css")
+        script(src="/assets/js/index.js" defer) 
+    body 
+        div.container
+            h1 Iteration
+             - const person = [{'id':1,'name':'Dan','img':'/assets/images/img-dan.png'}, {'id':2,'name':'Simon','img':'/assets/images/img-simon.png'}];
+            each a, img in person  
+                .card
+                    figure(class='image is-128x128 is-primary')
+                    img(src=a.img, alt="alt")
+                        
+                       
+                

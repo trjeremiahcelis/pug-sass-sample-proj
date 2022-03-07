@@ -3,67 +3,107 @@ html
     head
         link(rel="stylesheet", href="/assets/sass/style.css")
         link(rel="stylesheet", href="/assets/sass/bulma/bulma.min.css")
-        script(src="/assets/js/index.js" defer) 
+        link(rel="icon", type="image/png", href="/favicon.png")
+        script(src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js") 
+        script(src="/assets/js/index.js") 
     body
-        section(class='hero is-primary' id='section1')
+        //- TODO: add div and use classes
+        //- use different sizes (rem, em, vh)
+        section(class='hero is-primary' id='home')
             div.hero-head
-                nav(class='navbar', role='navigation', aria-label='main navigation')
+                nav(class='navbar' role='navigation' aria-label='main navigation')
                     div.container
                         div.navbar-brand
                             a(class='navbar-item' href="#")
                                 img(src="/assets/images/logo-cvx.png", alt="Logo", id='logo') 
                                 p.logotxt ConvX
-                            a(role='button' class='navbar-burger' aria-label="menu" aria-expanded="false" data-target="navbarlink")
+                            a(role='button' class='navbar-burger' aria-label="menu" aria-expanded="false" data-target="navbarLink" onclick='toggleBurgerMenu()')
                                 span(aria-hidden="true")
                                 span(aria-hidden="true")
                                 span(aria-hidden="true")
-                        div#navbar-link.navbar-menu
+
+                        div(id='navbarLink' class='navbar-menu')
                             div(class='navbar-end' id='links')
-                                a(class='navbar-item' href='#') About Us
-                                a(class='navbar-item' href='#') Contact Us
-                                a(class='navbar-item' href='#') How It Works
-                        div.navbar-end
-                            div.navbar-item
-                                div(class='buttons')
-                                    a(class='button is-link') 
-                                        strong Sign in
+                                a(class='navbar-item' href='#aboutus') About Us
+                                a(class='navbar-item' href='#contactinfo') Contact Us
+                                a(class='navbar-item' href='#howitworks') How It Works
+                                
+                                div.navbar-end
+                                    div.navbar-item
+                                        div(class='buttons')
+                                            a(class='button is-link') 
+                                                strong Sign in
             div.hero-body
                 div.container
-                    p.title Revolutionising Conveyancing through <br/> Digitilisation     
-                    p.subtitle ConvX is a technology platform that will automate and commoditise the mostly <br/> manual process of transferring land ownership
+                    p(class='title is-size-2-mobile') Revolutionising Conveyancing through <br/> Digitisation     
+                    p(class='subtitle is-size-4-mobile') ConvX is a technology platform that will automate and commoditise the mostly <br/> manual process of transferring land ownership
                     button(class="button" id='signupBtn')
                         strong Sign up
-        section 
+                        
+        section.aboutus 
             div.container#aboutus
-                div.columns
+                div(class='columns' id='aboutus')
                     div(class='column is-two-fifths')
-                        h1.title#aboutusTitle About Us
-                        p ConvX has legal, tech and start up talent, Dan, the tech lead, is also highly experienced in IP law; Simon, operations, has also founded the Mills Oakley Legal Services Accelator; and, Nick (sales lead) has scaled a global B2B business from 0 to $12M rev and 100 staff inside 3 years.
+                        h1(class='title is-size-1-mobile' id='aboutusTitle') About Us
+                        p(class='is-size-4-mobile') ConvX has legal, tech and start up talent, Dan, the tech lead, is also highly experienced in IP law; Simon, operations, has also founded the Mills Oakley Legal Services Accelator; and, Nick (sales lead) has scaled a global B2B business from 0 to $12M rev and 100 staff inside 3 years.
                         br
-                        p We have access to capital, the right networks and execution experience in spades. The timing is right, the team is right and we are now looking for investors to complete the picture.
-                    div(class='column is-one-fifth')
-                        div.card
-                            div.card-image
-                                figure(class='image is-256x256')
-                                    img(src="/assets/images/img-dan.png", alt="Dan Hunter photo", id='personImg')
-                            div.content
-                                p.name Dan Hunter
-                                p.personInfo Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris.
-                    div(class='column is-one-fifth')
-                        div.card
-                            div.card-image
-                                figure(class='image is-256x256')
-                                    img(src="/assets/images/img-simon.png", alt="Dan Hunter photo", id='personImg')
-                            div.content
-                                p.name Simon Quirk
-                                p.personInfo Lorem ipsum dolor sit amet, consectetur adipiscing elit.Phasellus nec iaculis mauris.
-                    div(class='column is-one-fifth')
-                        div.card
-                            div.card-image
-                                figure(class='image is-256x256')
-                                    img(src="/assets/images/img-nick.png", alt="Dan Hunter photo", id='personImg')
-                            div.content
-                                p.name Nick Stanley
-                                p.personInfo Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-                            
-                                
+                        p(class='is-size-4-mobile') We have access to capital, the right networks and execution experience in spades. The timing is right, the team is right and we are now looking for investors to complete the picture.
+                    //-ITERATION OF PERSON INFO 
+                    - const person = [{'name':'Dan Hunter','img':'/assets/images/img-dan.png','pinfo':'Lawyer and "Tech Guy" Dean od Law at Swinburne Founder of Quitch'}, {'name':'Simon Quirk','img':'/assets/images/img-simon.png','pinfo':'Lawyer and "Operations Guy" Ex COO of ASX listed Founder of Vidversity'},{'name':'Nick Stanley','img':'/assets/images/img-nick.png','pinfo':'Engineer and "Sales Guy" Founder of Sky Software Investor, multi founder, VC'}]
+                    each a in person
+                        div(class='column is-one-fifth')
+                            div.cards
+                                .card-image 
+                                    figure(class='image is-1by1')
+                                        img(src=a.img, id='personImg')
+                                .content 
+                                    p.name= a.name
+                                    p.personInfo(class='is-size-7-mobile')= a.pinfo
+        
+        section(class='hero is-primary' id='convx')
+            div.hero-body
+                div.logoandtext  
+                    img(src="/assets/images/logo-cvx.png", alt="ConvX Logo", id='logo2') 
+                    p.subtitle ConvX may be the Uber of conveyancing
+        
+        section(class='hero is-primary' id='howitworks')
+            .hero-body 
+                .columns
+                    div(class='column is-7 is-offset-5 is-1-tablet is-offset-1-tablet') 
+                        p(class='hiwTitle has-text-centered-mobile') How it Works
+                        ul
+                            each i in ["Interacts via web/mobile at the consumer level, ensuring timely information, response and reassurance","Automates and tracks all processes necessary to convey land, reducing insurance costs to deliver settlements more quickly and consistently ","Provides data analytics for clients who are developers. Data will also be packaged for sale to other parties.","Parcels out piecework within the transaction to home-based & remote knowledge workers ","Deconstructed process allows for the progressive automation of discrete stages over time", "Delivers lower cost to consumer while maintaining attractive margins and also enabling ConvX to scale with more agility than the traditional employee based model", "Integrates with other real estate platforms to create an end to end real estate solutions "]
+                                li(class='has-text-centered-mobile')= i
+        
+        section(class='contactinfo hero is-link')
+            - const contact = [{'logo':'map-marker', 'info':'56 Maxwell St, South Turrmurra NSW 2074, Australia'}, {'logo':'map-marker', 'info':'56 Maxwell St, South Turrmurra NSW 2074, Australia'}]
+            div(class='content column has-text-centered' id='contactinfo')
+                p.title Contact Information         
+                p
+                    span.icon-text  
+                        span.icon 
+                            ion-icon(name='location-sharp')   
+                        span 56 Maxwell St, South Turrmurra NSW 2074, Australia 
+                p
+                    span.icon-text      
+                        span.icon 
+                            ion-icon(name='call-sharp')   
+                        span +xx (x)xxxx xxx xxx
+                p
+                    span.icon-text      
+                        span.icon 
+                            ion-icon(name='call-sharp')   
+                        span +xx (x)xxxx xxx xxx
+                p
+                    span.icon-text      
+                        span.icon 
+                            ion-icon(name='mail-sharp')   
+                        span info@convx.com              
+            
+    footer.footer   
+        div(class='has-text-centered')
+            ion-icon(class='icon is-large' name='logo-linkedin')
+            p Privacy Policy - Terms & Conditions
+            p Copyright © ConvX
+            p v0.01
+            
